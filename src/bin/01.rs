@@ -7,7 +7,7 @@ pub fn part_one(input: &str) -> Option<u32> {
     
     for line in lines
     {
-        let values: Vec<&str> = line.split("   ").collect();
+        let values: Vec<&str> = line.split_whitespace().collect();
         if values.len() == 2
         {
             left_list.push(values.get(0)?.parse::<u32>().unwrap());
@@ -31,7 +31,7 @@ pub fn part_two(input: &str) -> Option<u32> {
     
     for line in lines
     {
-        let values: Vec<&str> = line.split("   ").collect();
+        let values: Vec<&str> = line.split_whitespace().collect();
         if values.len() == 2
         {
             left_list.push(values.get(0)?.parse::<u32>().unwrap());
